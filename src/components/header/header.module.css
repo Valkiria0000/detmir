@@ -1,0 +1,16 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+  border-bottom: 1px solid #e6f1fc;
+  font-weight: 700;
+}
+
+.list {
+  display: flex;
+}
+
+.list a {
+  padding: 10px;
+}
