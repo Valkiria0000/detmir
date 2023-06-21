@@ -17,8 +17,8 @@ export const HomePage = () => {
   }, []);
 
   return (
-    <div className={classes.home}>
-      <Product products={products.data[0]} />
-    </div>
+    <section className={classes.home}>
+      <Product products={products} />
+    </section>
   );
 };
