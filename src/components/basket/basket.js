@@ -6,7 +6,6 @@ const Basket = (props) => {
   return (
     <div className={classes.cart}>
       <FaShoppingCart />
-
       <span>Корзина (12)</span>
     </div>
   );
