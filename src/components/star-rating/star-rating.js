@@ -8,7 +8,7 @@ const StarRating = (props) => {
         let ratingValue = i + 1;
 
         return (
-          <span className={classes.star}>
+          <span className={classes.star} key={i}>
             <FaStar
               style={{
                 color:

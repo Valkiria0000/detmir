@@ -3,10 +3,7 @@
   align-items: center;
 }
 
-.cart img {
-  margin-right: 6px;
-}
-
 .cart span {
   cursor: pointer;
+  margin-left: 6px;
 }
