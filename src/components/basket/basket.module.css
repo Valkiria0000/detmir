@@ -1,9 +1,10 @@
 .cart {
   display: flex;
   align-items: center;
+  position: relative;
 }
 
-.cart span {
+.basket {
   cursor: pointer;
   margin-left: 6px;
 }

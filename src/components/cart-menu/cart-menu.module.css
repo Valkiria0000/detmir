@@ -1,0 +1,45 @@
+.menu {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  width: 560px;
+  padding: 24px;
+  z-index: 2;
+  background: #ffffff;
+  box-shadow: 0px 16px 40px rgba(23, 32, 41, 0.32);
+  border-radius: 24px;
+}
+
+.items {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #f2f6fc;
+}
+
+.items img {
+  width: 52px;
+  height: 52px;
+  padding: 12px 0;
+}
+
+.price {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  display: flex;
+  flex-direction: column;
+}
+.total {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.total span:nth-child(2) {
+  font-weight: 800;
+  font-size: 28px;
+  line-height: 32px;
+}
