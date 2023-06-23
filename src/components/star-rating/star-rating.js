@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { FaStar } from "react-icons/fa";
 import classes from "./star-rating.module.css";
 const StarRating = (props) => {
