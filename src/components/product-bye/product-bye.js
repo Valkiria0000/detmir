@@ -8,7 +8,6 @@ export const ProductBye = ({ products }) => {
   const handleClick = (e) => {
     e.stopPropagation();
     dispatch(setItemInCart(products));
-    console.log("hk");
   };
   return (
     <div>
