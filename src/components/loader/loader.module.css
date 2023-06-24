@@ -1,0 +1,28 @@
+.loader {
+  font-size: 28px;
+  font-weight: 800;
+  display: flex;
+  margin-top: 3rem;
+  text-align: center;
+  color: #0073e6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader p {
+  margin-left: 25px;
+}
+.animate {
+  animation: animateLoader 2s ease-in-out infinite forwards;
+  transition: 1s;
+}
+
+@keyframes animateLoader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
