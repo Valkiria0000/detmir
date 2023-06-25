@@ -1,0 +1,13 @@
+.total {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.total span:nth-child(2) {
+  font-weight: 800;
+  font-size: 28px;
+  line-height: 32px;
+}

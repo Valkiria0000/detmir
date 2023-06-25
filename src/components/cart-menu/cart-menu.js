@@ -1,32 +1,18 @@
 import React from "react";
-import Button from "../button/button";
 import classes from "./cart-menu.module.css";
-const CartMenu = ({ items, onClick }) => {
-  const totalPrice = items.reduce((acc, product) => (acc += product.price), 0);
+import CartItem from "../cart-item/cart-item";
+import CartTotal from "../cart-total/cart-total";
+const CartMenu = ({ items, product, onClick }) => {
   return (
     <div className={classes.menu}>
       <div className={classes.list}>
         {items.length > 0
           ? items.map((product) => {
-              return (
-                <div className={classes.items}>
-                  <img src={product.picture} alt={product.category} />
-                  <span>{product.category}</span>
-                  <span className={classes.price}>{product.price} ₽</span>
-                </div>
-              );
+              return <CartItem product={product} key={product.id} />;
             })
           : "Корзина пуста"}
       </div>
-      {items.length > 0 ? (
-        <div className={classes.price}>
-          <div className={classes.total}>
-            <span>Итого</span>
-            <span>{totalPrice} ₽</span>
-          </div>
-          <Button onClick={onClick}>Оформить заказ</Button>
-        </div>
-      ) : null}
+      {items.length > 0 ? <CartTotal items={items} onClick={onClick} /> : null}
     </div>
   );
 };

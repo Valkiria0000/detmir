@@ -16,11 +16,9 @@ export const ProductBye = ({ products }) => {
     }
   };
   return (
-    <div>
-      <Button onClick={handleClick}>
-        {isItemsInCart ? "Удалить" : "В корзину"}
-      </Button>
-    </div>
+    <Button onClick={handleClick}>
+      {isItemsInCart ? "Удалить" : "Добавить в корзину"}
+    </Button>
   );
 };
 

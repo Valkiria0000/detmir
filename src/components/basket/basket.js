@@ -14,7 +14,7 @@ const Basket = (props) => {
       onClick={() => setIsCartMenuVisible(!isCartMenuVisible)}
     >
       <FaShoppingCart />
-      <span className={classes.basket}>Корзина (12)</span>
+      <span className={classes.basket}>Корзина ({items.length})</span>
       {isCartMenuVisible && <CartMenu items={items} onClick={() => null} />}
     </div>
   );
