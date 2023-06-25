@@ -1,15 +1,16 @@
 import React from "react";
-import { PiArrowBendUpLeftBold } from "react-icons/pi";
-const ProductInfo = (props) => {
+import StarRating from "../star-rating/star-rating";
+import ProductBye from "../product-bye/product-bye";
+import ProductText from "../product-text/product-text";
+import classes from "./product-info.module.css";
+const ProductInfo = ({ product }) => {
   return (
-    <div>
-      <PiArrowBendUpLeftBold />
-      <span>Условия возврата</span>
-      <p>
-        Обменять или вернуть товар надлежащего качества можно в течение 14 дней
-        с момента покупки.
-      </p>
-      <p>Цены в интернет-магазине могут отличаться от розничных магазинов.</p>
+    <div className={classes.info}>
+      <h3>{product.title}</h3>
+      <StarRating rating={product.rating} />
+      <p>{product.price} ₽</p>
+      <ProductBye products={product} />
+      <ProductText />
     </div>
   );
 };
