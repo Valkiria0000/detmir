@@ -1,11 +1,17 @@
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 
 import classes from "./basket.module.css";
 import { FaShoppingCart } from "react-icons/fa";
 import CartMenu from "../cart-menu/cart-menu";
 import { useSelector } from "react-redux";
+import { useNavigate } from "react-router";
 
 const Basket = (props) => {
+  const navigate = useNavigate();
+  const handleClick = useCallback(() => {
+    setIsCartMenuVisible(false);
+    navigate("/order");
+  }, [navigate]);
   const [isCartMenuVisible, setIsCartMenuVisible] = useState(false);
   const items = useSelector((state) => state.cart.itemsInCart);
   return (
@@ -15,7 +21,7 @@ const Basket = (props) => {
     >
       <FaShoppingCart />
       <span className={classes.basket}>Корзина ({items.length})</span>
-      {isCartMenuVisible && <CartMenu items={items} onClick={() => null} />}
+      {isCartMenuVisible && <CartMenu items={items} onClick={handleClick} />}
     </div>
   );
 };

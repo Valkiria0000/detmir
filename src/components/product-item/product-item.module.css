@@ -1,0 +1,31 @@
+.product {
+  width: 250px;
+  height: 358px;
+  background: #ffffff;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 16px;
+  cursor: pointer;
+}
+
+.product:not(:last-child) {
+  margin-bottom: 24px;
+  margin-right: 24px;
+}
+.product img {
+  border: 2px solid #ffffff;
+  border-radius: 16px 16px 0px 0px;
+}
+
+.product h3 {
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.product p {
+  font-weight: 800;
+  font-size: 22px;
+  line-height: 24px;
+}

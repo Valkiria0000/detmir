@@ -7,13 +7,15 @@ import { Provider } from "react-redux";
 
 import { store } from "./redux/index";
 import ProductPage from "./pages/product-page/product-page";
+import OrderPage from "./pages/order-page/order-page";
+import { paths } from "./paths";
 const links = [
   {
     id: 1,
     link: "Товары",
-    path: "/",
+    path: paths.home,
   },
-  { id: 2, link: "Заказы", path: "/заказы" },
+  { id: 2, link: "Заказы", path: "/p" },
 ];
 function App() {
   return (
@@ -23,8 +25,9 @@ function App() {
           <Header links={links} />
           <Routes>
             <Route path="*" element={<NotFound />} />
-            <Route path="/" element={<HomePage />} />
-            <Route path="/:id" element={<ProductPage />} />
+            <Route path={paths.home} element={<HomePage />} />
+            <Route path={`${paths.product}/:id`} element={<ProductPage />} />
+            <Route path="/order" element={<OrderPage />} />
           </Routes>
         </div>
       </Router>
