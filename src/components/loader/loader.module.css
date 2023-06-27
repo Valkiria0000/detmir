@@ -13,7 +13,7 @@
 .loader p {
   margin-left: 25px;
 }
-.animate {
+.animate_loader {
   animation: animateLoader 2s ease-in-out infinite forwards;
   transition: 1s;
 }

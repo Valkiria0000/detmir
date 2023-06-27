@@ -4,7 +4,7 @@ import { FiLoader } from "react-icons/fi";
 const Loader = (props) => {
   return (
     <div className={classes.loader}>
-      <FiLoader className={classes.animate} />
+      <FiLoader className={classes.animate_loader} />
 
       <p>Подождите...</p>
     </div>

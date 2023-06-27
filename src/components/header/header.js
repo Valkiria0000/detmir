@@ -1,6 +1,6 @@
 import React from "react";
 import Logo from "../../assets/Logo.svg";
-import Basket from "../basket/basket";
+import Cart from "../cart/cart";
 
 import classes from "./header.module.css";
 import { NavLink } from "react-router-dom";
@@ -25,7 +25,7 @@ const Header = ({ links }) => {
       <nav>
         <ul className={classes.list}>{linksItem}</ul>
       </nav>
-      <Basket />
+      <Cart />
     </header>
   );
 };

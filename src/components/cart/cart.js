@@ -1,12 +1,10 @@
 import React, { useCallback, useState } from "react";
-
-import classes from "./basket.module.css";
 import { FaShoppingCart } from "react-icons/fa";
 import CartMenu from "../cart-menu/cart-menu";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router";
-
-const Basket = (props) => {
+import classes from "./cart.module.css";
+const Cart = (props) => {
   const navigate = useNavigate();
   const handleClick = useCallback(() => {
     setIsCartMenuVisible(false);
@@ -20,10 +18,10 @@ const Basket = (props) => {
       onClick={() => setIsCartMenuVisible(!isCartMenuVisible)}
     >
       <FaShoppingCart />
-      <span className={classes.basket}>Корзина ({items.length})</span>
+      <span className={classes.cart}>Корзина ({items.length})</span>
       {isCartMenuVisible && <CartMenu items={items} onClick={handleClick} />}
     </div>
   );
 };
 
-export default Basket;
+export default Cart;

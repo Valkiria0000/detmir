@@ -2,9 +2,6 @@
   display: flex;
   align-items: center;
   position: relative;
-}
-
-.basket {
   cursor: pointer;
   margin-left: 6px;
 }
